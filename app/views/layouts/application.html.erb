@@ -9,7 +9,7 @@
 <body>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-
+  <%= link_to "Sign in with linkedin", user_omniauth_authorize_path(:linkedin) %>
 <%= yield %>
 
 </body>
