@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Devise is being used for creating users on the site.
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
