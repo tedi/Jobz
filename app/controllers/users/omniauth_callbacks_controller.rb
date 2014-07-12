@@ -1,8 +1,7 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def linkedin
-    response = request.env["omniauth.auth"]["info"]
-    
-    @user = User.find_by_email(response['email']) 
+
+    @user = User.find_by_email(request.env["omniauth.auth"]["info"]['email']) 
     if @user
     	#redirect to their homepage
     else
@@ -12,11 +11,14 @@ end
 
 private
 
-def create_job_seeker
-	response = request.env["omniauth.auth"]["info"]
-	@job_seeker = JobSeeker.create(objective: response['description'], current_pos: response['headline'])
-	@user = User.create(email: response['email'],first_name: response['first_name'],last_name: response['last_name'], job_seeker_id: @job_seeker.id)	
-end
+  def create_job_seeker
+  	response = request.env["omniauth.auth"]["info"]
+  	@job_seeker = JobSeeker.new(objective: response['description'], current_pos: response['headline'], image: response['image'])
+  	
+    if @job_seeker.save
+      @user = User.create(email: response['email'],first_name: response['first_name'],last_name: response['last_name'], job_seeker_id: @job_seeker.id)	
+    end
+  end
 
 
 end
