@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  objective: MyString
+  current_pos: MyString
+  grad_year: 1
+  college: MyString
+  degree: MyString
+  loc_id: 1
+
+two:
+  objective: MyString
+  current_pos: MyString
+  grad_year: 1
+  college: MyString
+  degree: MyString
+  loc_id: 1
