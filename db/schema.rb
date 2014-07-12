@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20140712201011) do
 
   create_table "job_seekers", force: true do |t|
@@ -49,5 +50,40 @@ ActiveRecord::Schema.define(version: 20140712201011) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+ActiveRecord::Schema.define(version: 20140712173331) do
+
+  create_table "job_histories", force: true do |t|
+    t.integer  "seeker_id"
+    t.integer  "year_start"
+    t.integer  "year_end"
+    t.string   "title"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "jobs", force: true do |t|
+    t.integer  "rec_id"
+    t.string   "name"
+    t.string   "description"
+    t.string   "excerpt"
+    t.string   "keywords"
+    t.integer  "salary"
+    t.integer  "company_id"
+    t.integer  "location_id"
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "locations", force: true do |t|
+    t.string   "name"
+    t.integer  "zip_code"
+    t.integer  "lat"
+    t.integer  "long"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
