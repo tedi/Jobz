@@ -3,11 +3,11 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     @user = User.find_by_email(request.env["omniauth.auth"]["info"]['email']) 
     if @user
-    	#redirect to their homepage
+    	redirect_to users_role_path
     else
    		create_job_seeker
     end
-end
+  end
 
 private
 

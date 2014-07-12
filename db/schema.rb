@@ -71,13 +71,13 @@ ActiveRecord::Schema.define(version: 20140712201011) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "provider"
-    t.string   "uid"
     t.string   "first_name"
     t.string   "last_name"
     t.integer  "role_id"
     t.integer  "recruiter_id"
     t.integer  "job_seeker_id"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
