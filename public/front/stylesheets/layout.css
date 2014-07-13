@@ -1,0 +1,305 @@
+/* line 8, ../scss/layout.sass */
+.linkedin_login {
+  background: url(../images/li.svg) #0092c9 no-repeat;
+  padding: 10px 10px 10px 50px;
+  margin: 0 20px;
+  border-radius: 5px;
+  display: block;
+  margin-top: 20px;
+  color: white;
+}
+/* line 16, ../scss/layout.sass */
+.linkedin_login:hover {
+  color: white;
+  background: url(../images/li.svg) #006d96 no-repeat;
+}
+
+/* line 19, ../scss/layout.sass */
+.chat_box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  margin-bottom: 0;
+}
+/* line 26, ../scss/layout.sass */
+.chat_box input {
+  width: 100%;
+  margin-bottom: 0;
+}
+/* line 29, ../scss/layout.sass */
+.chat_box button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 9px;
+  margin-bottom: 0;
+}
+
+/* line 35, ../scss/layout.sass */
+.splash {
+  background: #f04124;
+  min-height: 100%;
+}
+/* line 38, ../scss/layout.sass */
+.splash h1 {
+  margin-top: 50px;
+  color: white;
+  font-size: 300%;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 46, ../scss/layout.sass */
+.splash_profile_image {
+  margin-top: 30px;
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+}
+
+/* line 52, ../scss/layout.sass */
+.inner-wrap {
+  margin-bottom: 70px;
+}
+
+/* line 55, ../scss/layout.sass */
+.container {
+  margin: 0 5%;
+  width: 90%;
+}
+/* line 58, ../scss/layout.sass */
+.container.modal {
+  text-align: center;
+}
+/* line 60, ../scss/layout.sass */
+.container.modal h3 {
+  margin-top: 30px;
+}
+/* line 63, ../scss/layout.sass */
+.container.modal .button-group > li:last-child {
+  float: right;
+}
+
+/* line 66, ../scss/layout.sass */
+h4.row.message_heading {
+  margin-bottom: 10px;
+}
+
+/* line 69, ../scss/layout.sass */
+.message img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 40px;
+  border: 3px solid #f04124;
+}
+/* line 75, ../scss/layout.sass */
+.message .panel {
+  width: calc(100% - 75px);
+  padding: 0.75rem;
+  position: relative;
+}
+/* line 80, ../scss/layout.sass */
+.message.mine img {
+  float: left;
+}
+/* line 82, ../scss/layout.sass */
+.message.mine .panel {
+  float: right;
+  background: #fffbfb;
+  border-color: #fde7e3;
+}
+/* line 86, ../scss/layout.sass */
+.message.mine .panel:after {
+  top: 12px;
+  left: -15px;
+  bottom: auto;
+  right: auto;
+  border-width: 10px 15px 10px 0;
+  border-color: transparent #fde7e3;
+  content: "";
+  position: absolute;
+  bottom: auto;
+  border-style: solid;
+  display: block;
+  width: 0;
+}
+/* line 100, ../scss/layout.sass */
+.message.theirs img {
+  float: right;
+}
+/* line 102, ../scss/layout.sass */
+.message.theirs .panel {
+  float: left;
+  margin-right: 15px;
+}
+/* line 105, ../scss/layout.sass */
+.message.theirs .panel:after {
+  top: 12px;
+  right: -15px;
+  bottom: auto;
+  left: auto;
+  border-width: 10px 0 10px 15px;
+  border-color: transparent #b6edff;
+  content: "";
+  position: absolute;
+  bottom: auto;
+  border-style: solid;
+  display: block;
+  width: 0;
+}
+
+/* line 120, ../scss/layout.sass */
+.button-group {
+  margin: 0 5%;
+  position: fixed;
+  width: 90%;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+}
+/* line 127, ../scss/layout.sass */
+.button-group li {
+  width: 49%;
+  margin-right: 1%;
+}
+/* line 130, ../scss/layout.sass */
+.button-group li a {
+  width: 100%;
+  display: block;
+}
+/* line 133, ../scss/layout.sass */
+.button-group li a.button {
+  margin: 0;
+}
+/* line 135, ../scss/layout.sass */
+.button-group li:last-child {
+  margin-right: 0;
+  margin-left: 1%;
+}
+
+/* line 139, ../scss/layout.sass */
+.judge .user_profile {
+  margin-top: 10px;
+}
+/* line 141, ../scss/layout.sass */
+.judge .user_profile .create_job {
+  padding: 5px 10px;
+  float: right;
+}
+/* line 144, ../scss/layout.sass */
+.judge .user_profile .profile_top {
+  margin-bottom: 10px;
+}
+/* line 146, ../scss/layout.sass */
+.judge .user_profile .splash_profile_image {
+  margin-top: 0;
+}
+/* line 149, ../scss/layout.sass */
+.judge .user_profile img {
+  padding: 0;
+  max-height: 90px;
+}
+/* line 153, ../scss/layout.sass */
+.judge .user_profile .user_info span {
+  display: block;
+  margin-top: 5px;
+}
+/* line 156, ../scss/layout.sass */
+.judge .user_profile .job {
+  margin-top: 5px;
+}
+/* line 158, ../scss/layout.sass */
+.judge .user_profile .job .panel.callout {
+  padding: 0.75rem;
+  margin-bottom: 0;
+  background: #fffbfb;
+  border-color: #fde7e3;
+}
+/* line 164, ../scss/layout.sass */
+.judge .user_profile .job .panel.callout p, .judge .user_profile .job .panel.callout h5 {
+  line-height: 1.2;
+}
+/* line 167, ../scss/layout.sass */
+.judge .user_profile .job .panel.callout h5 {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+/* line 170, ../scss/layout.sass */
+.judge .user_profile .job .panel.callout h5 span {
+  float: right;
+}
+/* line 172, ../scss/layout.sass */
+.judge .user_profile .job .panel.callout h5 img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 40px;
+  border: 3px solid #f04124;
+}
+/* line 178, ../scss/layout.sass */
+.judge .user_profile .job .panel.callout h6 {
+  font-style: italic;
+  margin-top: 0;
+}
+
+/* line 182, ../scss/layout.sass */
+h4.row {
+  color: #f04124;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  font-size: 140%;
+}
+
+/* line 190, ../scss/layout.sass */
+.notification {
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  border: 2px solid white;
+  background: red;
+  line-height: 90%;
+  border-radius: 20px;
+  width: 30px;
+  height: 29px;
+  color: white;
+  font-size: 12px;
+  padding: 7px;
+  text-align: center;
+}
+
+/* line 206, ../scss/layout.sass */
+.off-canvas-list .notification {
+  position: relative;
+  margin-left: 10px;
+  left: 0;
+  margin-left: 10px;
+  padding: 6px 10px;
+}
+
+/* line 214, ../scss/layout.sass */
+#main_nav {
+  background: #f04124;
+}
+
+/* line 217, ../scss/layout.sass */
+.right-small {
+  border-left: solid 1px #d32a0e;
+}
+
+/* line 220, ../scss/layout.sass */
+.right-off-canvas-menu {
+  min-height: 300px;
+  background: #f04124;
+}
+/* line 224, ../scss/layout.sass */
+.right-off-canvas-menu ul.off-canvas-list li label {
+  color: #eeeeee;
+  background: #d32a0e;
+}
+/* line 227, ../scss/layout.sass */
+.right-off-canvas-menu ul.off-canvas-list li a {
+  border-bottom: 1px solid #d32a0e;
+}

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  job_id: 1
+  seeker_id: 1
+  recruiter_id: 1
+  conversation_id: 1
+  status_id: 1
+
+two:
+  job_id: 1
+  seeker_id: 1
+  recruiter_id: 1
+  conversation_id: 1
+  status_id: 1
