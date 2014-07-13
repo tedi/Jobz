@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140713022644) do
+ActiveRecord::Schema.define(version: 20140713041024) do
 
   create_table "connections", force: true do |t|
     t.integer  "job_id"
