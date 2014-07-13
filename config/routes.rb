@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :recruiters, only: [:show] do
     resources :jobs
   end
+  resources :chats, :messages
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140713043017) do
+ActiveRecord::Schema.define(version: 20140713053648) do
+
+  create_table "chats", force: true do |t|
+    t.integer  "connection_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "connections", force: true do |t|
     t.integer  "job_id"
@@ -64,6 +70,14 @@ ActiveRecord::Schema.define(version: 20140713043017) do
     t.integer  "long"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "messages", force: true do |t|
+    t.integer  "user_id"
+    t.text     "dialogue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "chat_id"
   end
 
   create_table "recruiters", force: true do |t|

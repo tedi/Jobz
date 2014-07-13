@@ -1,0 +1,23 @@
+
+<%= form_tag "/messages", class: "chat_box" do %>
+	<%= hidden_field_tag :chat_id, params[:id] %>
+	<%= text_field_tag(:dialogue) %>
+	<%= submit_tag("Submit", class: "button success") %>
+<% end %>
+
+<section class="main-section container judge">
+	<article class="user_profile">
+	  
+		<h4 class="row message_heading"><%= "#{current_user.first_name} #{current_user.last_name}" %></h4>
+
+		<% @chat.messages.each do |message| %>		
+			<div class="row message <%= message.user == current_user ? 'mine' : 'theirs' %>">
+		  	<img src="<%= message.user.image %>" />
+		  	<div class="panel callout radius">
+		    	<h5><%= message.dialogue %></h5>
+		  	</div>
+			</div>
+		<% end %>
+
+	</article>
+</section>
