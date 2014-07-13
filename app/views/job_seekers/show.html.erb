@@ -1,9 +1,13 @@
+		<% if !@job.nil? %>
 		<ul class="button-group [radius round]">
-	      <li><a href="#" class="button alert">Pass</a></li>
-	      <li><a href="#" class="button success">Apply</a></li>
+	      <li><a href="/job_seekers/<%= @job_seeker.id %>/pass/<%= @job.id %>" class="button alert">Pass</a></li>
+	      <li><a href="/job_seekers/<%= @job_seeker.id %>/apply/<%= @job.id %>" class="button success">Apply</a></li>
 	    </ul>
+	    <% end %>
         <section class="main-section container judge">
+          <% if !@job.nil? %>
           <article class="user_profile">
+
             <section class="row profile_top">
               <img src="/front/images/ga_logo.png" class="small-3 columns">    
               <div class="user_info small-9 columns">
@@ -31,4 +35,7 @@
             </div> -->
 
           </article>
+          <% else %>
+			<h4 class="row">There are currently no open positions</h4>
+          <% end %>
         </section>

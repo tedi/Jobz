@@ -15,6 +15,9 @@ Rails.application.routes.draw do
 
   resources :job_seekers, only: [:show]
   resources :recruiters, only: [:show]
+
+  get 'job_seekers/:seeker_id/apply/:job_id' => 'job_seekers#apply'
+  get 'job_seekers/:seeker_id/pass/:job_id' => 'job_seekers#pass'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
