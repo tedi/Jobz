@@ -9,6 +9,12 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'users/role' => 'users#role'
+  get 'users/create_job_seeker' => 'users#create_job_seeker'
+  get 'users/new_recruiter' => 'users#new_recruiter'
+  post 'users/new_recruiter' => 'users#new_recruiter', as: "recruiters"
+
+  resources :job_seekers, only: [:show]
+  resources :recruiters, only: [:show]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
