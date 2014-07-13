@@ -13,7 +13,34 @@
 
   <body <%= body_class %>>
 
-    <%= yield %>
+    <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+      <% if params[:controller] != "devise/sessions" &&
+            params[:controller] != "users" %>
+        <nav class="tab-bar" id="main_nav">
+          <section class="tab-bar-section">
+            <h1 class="title">Jobz</h1>
+          </section>
+
+          <section class="right-small">
+            <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+          </section>
+        </nav>
+        <aside class="right-off-canvas-menu">
+          <ul class="off-canvas-list">
+            <li><a href="#">Matches</a></li>
+            <li><a href="#">Chat</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Search</a></li>
+          </ul>
+        </aside>
+        <% end %>
+        <%= yield %>
+        
+      </div>
+    </div>
+
+    
     <%= javascript_include_tag "/front/bower_components/jquery/dist/jquery.min.js" %>
     <%= javascript_include_tag "/front/bower_components/foundation/js/foundation.min.js" %>
     <%= javascript_include_tag "/front/js/app.js" %>

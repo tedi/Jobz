@@ -3,6 +3,16 @@ class UsersController < ApplicationController
 	def role
 		@user = User.find_by_email(session[:linkedin_data]['email'])
 		@profile_image = @user.image
+		puts "==============================================================="
+		p @user
+		puts session[:linkedin_data]['last_name']
+		puts session[:linkedin_data]['image']
+		if !@user.job_seeker_id.nil?
+			redirect_to job_seeker_path @user.job_seeker_id
+		elsif !@user.recruiter_id.nil?
+			redirect_to recruiter_path @user.recruiter_id
+		end
+
 	end
 
 	def create_job_seeker
