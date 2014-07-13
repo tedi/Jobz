@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140713004408) do
+ActiveRecord::Schema.define(version: 20140713013510) do
 
   create_table "job_histories", force: true do |t|
     t.integer  "seeker_id"
@@ -38,7 +38,6 @@ ActiveRecord::Schema.define(version: 20140713004408) do
   create_table "jobs", force: true do |t|
     t.integer  "rec_id"
     t.string   "name"
-    t.string   "description"
     t.string   "excerpt"
     t.string   "keywords"
     t.integer  "salary"
@@ -46,6 +45,8 @@ ActiveRecord::Schema.define(version: 20140713004408) do
     t.integer  "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "qualifications"
+    t.text     "responsibilities"
   end
 
   create_table "locations", force: true do |t|
