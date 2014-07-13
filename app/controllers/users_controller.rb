@@ -25,6 +25,7 @@ class UsersController < ApplicationController
 		if request.post?
 			@recruiter = Recruiter.create(company: params[:recruiter][:company])
 			User.find_by_email(session[:linkedin_data]['email']).update(recruiter_id: @recruiter.id)
+			redirect_to users_role_path
 		end
 	end
 

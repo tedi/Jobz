@@ -1,0 +1,48 @@
+<section class="main-section container judge">
+	<%= form_for ([@recruiter, @recruiter.jobs.build]) do |f| %>
+    <div class="row">
+      <div class="large-12 columns">
+       
+        <%= f.label :name, "Title" %>
+        <%= f.text_field :name, placeholder: 'Position Title' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        
+      <%= f.label :description %>
+      <%= f.text_field :description, placeholder: 'Position Description' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+      
+      <%= f.label :excerpt %>
+      <%= f.text_field :excerpt, placeholder: 'Excerpt' %>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+      
+      <%= f.label :keywords %>
+      <%= f.text_field :keywords, placeholder: 'Keywords' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+       
+      <%= f.label :salary %>
+      <%= f.text_field :salary, placeholder: 'Salary' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+       
+      <%= f.label :location_id %>
+      <%= f.text_field :location_id, placeholder: 'Location' %>
+      </div>
+    </div>
+    <%= f.submit "Create Job", class: "button success" %>
+  <%end%>
+</section>

@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   post 'users/new_recruiter' => 'users#new_recruiter', as: "recruiters"
 
   resources :job_seekers, only: [:show]
-  resources :recruiters, only: [:show]
+  resources :recruiters, only: [:show] do
+    resources :jobs
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

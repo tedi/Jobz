@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140713022644) do
+ActiveRecord::Schema.define(version: 20140713043017) do
 
   create_table "connections", force: true do |t|
     t.integer  "job_id"
@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 20140713022644) do
   end
 
   create_table "jobs", force: true do |t|
-    t.integer  "rec_id"
     t.string   "name"
     t.string   "description"
     t.string   "excerpt"
@@ -55,6 +54,7 @@ ActiveRecord::Schema.define(version: 20140713022644) do
     t.integer  "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "recruiter_id"
   end
 
   create_table "locations", force: true do |t|

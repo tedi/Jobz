@@ -5,13 +5,15 @@ class JobsController < ApplicationController
 	end
 
 	def new
+		@recruiter = Recruiter.find(params[:recruiter_id])
 		@job = Job.new
 	end
 
 	def create
-		@job = Job.new(job_params)
+		@recruiter = Recruiter.find(params[:recruiter_id])
+		@job = @recruiter.jobs.create(job_params)
 		if @job.save
-			redirect_to jobs_path
+			redirect_to recruiter_path(@recruiter)
 		else
 			render "new"
 		end
