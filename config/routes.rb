@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'users/role' => 'users#role'
+  get 'users/create_job_seeker' => 'users#create_job_seeker'
+  get 'users/create_recruiter' => 'users#create_recruiter'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
