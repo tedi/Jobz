@@ -1,0 +1,127 @@
+// Variables
+$main_orange: #f04124
+$darker_orange: darken($main_orange, 10%)
+$lighter_orange: lighten($main_orange, 45%)
+$blue: #0092C9
+
+// General
+.linkedin_login
+	background: url(../images/li.svg) $blue no-repeat
+	padding: 10px 10px 10px 50px
+	margin: 0 20px
+	border-radius: 5px
+	display: block
+	margin-top: 20px
+	color: #fff
+	&:hover
+		color: #fff
+		background: url(../images/li.svg) darken($blue, 10%) no-repeat
+
+.splash
+	background: $main_orange
+	min-height: 100%
+	h1
+		margin-top: 50px
+		color: #fff
+		font-size: 300%
+		font-weight: bold
+		text-align: center
+
+
+.splash_profile_image
+	margin-top: 30px
+	width: 100%
+	height: 250px
+	background-size: cover
+
+.inner-wrap
+	margin-bottom: 70px
+
+.container
+	margin: 0 5%
+	width: 90%
+	&.modal
+		text-align: center
+		h3
+			margin-top: 30px
+		.button-group 
+			& > li:last-child
+				float: right
+
+// Judge screen(s)
+.button-group
+	margin: 0 5%
+	position: fixed
+	width: 90%
+	bottom: 0
+	left: 0
+	z-index: 9999
+	li
+		width: 49%
+		margin-right: 1%
+		a
+			width: 100%
+			display: block
+			&.button
+				margin: 0
+		&:last-child
+			margin-right: 0
+			margin-left: 1%
+.judge
+	.user_profile
+		margin-top: 10px
+		.profile_top
+			margin-bottom: 10px
+		.splash_profile_image
+			margin-top: 0
+			// width: 
+		img
+			padding: 0
+			max-height: 90px // To do: fix proportion/ratio of image later
+		.user_info
+			span
+				display: block
+				margin-top: 5px
+		.job
+			margin-top: 5px
+			.panel.callout
+				padding: .75rem
+				margin-bottom: 0
+				background: $lighter_orange
+				border-color: lighten($main_orange, 40%)
+				
+				p, h5
+					line-height: 1.2
+					// color: #eee
+				h5
+					font-weight: bold
+					margin-bottom: 0
+					span
+						float: right
+				h6
+					font-style: italic
+					margin-top: 0
+
+h4.row
+	color: $main_orange
+	font-weight: bold
+	margin: 10px 0 0 0
+	font-size: 140%
+// Main navigation
+#main_nav 
+	background: $main_orange
+
+.right-small
+	border-left: solid 1px $darker_orange
+
+.right-off-canvas-menu
+	min-height: 300px
+	background: $main_orange
+	ul.off-canvas-list li 
+		label
+			color: #eee
+			background: $darker_orange
+		a
+			border-bottom: 1px solid $darker_orange
+
+
