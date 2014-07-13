@@ -3,8 +3,6 @@
   <h3>Select your role</h3>
   <ul class="button-group [radius round]">
     <li><%= link_to "Job Seeker", users_create_job_seeker_path, role: :job_seeker, class: 'button [secondary alert success]' %></li>
-    <li><%= link_to "Recruiter", users_create_recruiter_path, role: :recruiter, class: 'button [secondary alert success]' %></li>
-    <!-- <li><a href="job_profile.html" class="button [secondary alert success]">Job Seeker</a></li>
-    <li><a href="seeker_profile.html" class="button [secondary alert success]">Employer</a></li> -->
+    <li><%= link_to "Recruiter", users_new_recruiter_path, role: :recruiter, class: 'button [secondary alert success]' %></li>
   </ul>
 </section>
