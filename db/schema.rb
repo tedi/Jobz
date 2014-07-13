@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140713022644) do
 
   create_table "connections", force: true do |t|
@@ -22,6 +23,9 @@ ActiveRecord::Schema.define(version: 20140713022644) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+=======
+ActiveRecord::Schema.define(version: 20140712201011) do
+>>>>>>> master
 
   create_table "job_histories", force: true do |t|
     t.integer  "seeker_id"
@@ -81,13 +85,21 @@ ActiveRecord::Schema.define(version: 20140713022644) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+<<<<<<< HEAD
     t.string   "provider"
     t.string   "uid"
+=======
+>>>>>>> master
     t.string   "first_name"
     t.string   "last_name"
     t.integer  "role_id"
     t.integer  "recruiter_id"
     t.integer  "job_seeker_id"
+<<<<<<< HEAD
+=======
+    t.string   "provider"
+    t.string   "uid"
+>>>>>>> master
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

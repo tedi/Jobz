@@ -1,0 +1,230 @@
+// Variables
+$main_orange: #f04124
+$darker_orange: darken($main_orange, 10%)
+$lighter_orange: lighten($main_orange, 45%)
+$blue: #0092C9
+
+// General
+.linkedin_login
+	background: url(../images/li.svg) $blue no-repeat
+	padding: 10px 10px 10px 50px
+	margin: 0 20px
+	border-radius: 5px
+	display: block
+	margin-top: 20px
+	color: #fff
+	&:hover
+		color: #fff
+		background: url(../images/li.svg) darken($blue, 10%) no-repeat
+.chat_box
+	position: fixed
+	bottom: 0
+	left: 0
+	z-index: 9999
+	width: 100%
+	margin-bottom: 0
+	input
+		width: 100%
+		margin-bottom: 0
+	button
+		position: absolute
+		right: 0
+		bottom: 0
+		padding: 9px
+		margin-bottom: 0
+.splash
+	background: $main_orange
+	min-height: 100%
+	h1
+		margin-top: 50px
+		color: #fff
+		font-size: 300%
+		font-weight: bold
+		text-align: center
+
+
+.splash_profile_image
+	margin-top: 30px
+	width: 100%
+	height: 250px
+	background-size: cover
+
+.inner-wrap
+	margin-bottom: 70px
+
+.container
+	margin: 0 5%
+	width: 90%
+	&.modal
+		text-align: center
+		h3
+			margin-top: 30px
+		.button-group 
+			& > li:last-child
+				float: right
+// Chat/messages
+h4.row.message_heading
+	margin-bottom: 10px
+.message
+	img
+		width: 40px
+		height: 40px
+		margin-right: 10px
+		border-radius: 40px
+		border: 3px solid $main_orange
+	.panel
+		width: calc(100% - 75px)
+		padding: .75rem
+		position: relative
+	&.mine
+		img
+			float: left	
+		.panel
+			float: right
+			background: $lighter_orange
+			border-color: lighten($main_orange, 40%)
+			&:after
+				top: 12px
+				left: -15px
+				bottom: auto
+				right: auto
+				border-width: 10px 15px 10px 0
+				border-color: transparent lighten($main_orange, 40%)
+				content: ""
+				position: absolute
+				bottom: auto
+				border-style: solid
+				display: block
+				width: 0
+	&.theirs
+		img
+			float: right
+		.panel
+			float: left
+			margin-right: 15px
+			&:after
+				top: 12px
+				right: -15px
+				bottom: auto
+				left: auto
+				border-width: 10px 0 10px 15px
+				border-color: transparent #b6edff
+				content: ""
+				position: absolute
+				bottom: auto
+				border-style: solid
+				display: block
+				width: 0
+
+// Judge screen(s)
+.button-group
+	margin: 0 5%
+	position: fixed
+	width: 90%
+	bottom: 0
+	left: 0
+	z-index: 9999
+	li
+		width: 49%
+		margin-right: 1%
+		a
+			width: 100%
+			display: block
+			&.button
+				margin: 0
+		&:last-child
+			margin-right: 0
+			margin-left: 1%
+.judge
+	.user_profile
+		margin-top: 10px
+		.create_job
+			padding: 5px 10px
+			float: right
+		.profile_top
+			margin-bottom: 10px
+		.splash_profile_image
+			margin-top: 0
+			// width: 
+		img
+			padding: 0
+			max-height: 90px // To do: fix proportion/ratio of image later
+		.user_info
+			span
+				display: block
+				margin-top: 5px
+		.job
+			margin-top: 5px
+			.panel.callout
+				padding: .75rem
+				margin-bottom: 0
+				background: $lighter_orange
+				border-color: lighten($main_orange, 40%)
+				
+				p, h5
+					line-height: 1.2
+					// color: #eee
+				h5
+					font-weight: bold
+					margin-bottom: 0
+					span
+						float: right
+					img
+						width: 40px
+						height: 40px
+						margin-right: 10px
+						border-radius: 40px
+						border: 3px solid $main_orange
+				h6
+					font-style: italic
+					margin-top: 0
+
+h4.row
+	color: $main_orange
+	font-weight: bold
+	margin: 10px 0 0 0
+	font-size: 140%
+
+
+// Notifications
+.notification
+	position: absolute
+	bottom: 0
+	left: -20px
+	border: 2px solid white
+	background: red
+	line-height: 90%
+	border-radius: 20px
+	width: 30px
+	height: 29px
+	color: white
+	font-size: 12px
+	padding: 7px
+	text-align: center
+
+.off-canvas-list
+	.notification
+		position: relative
+		margin-left: 10px
+		left: 0
+		margin-left: 10px
+		padding: 6px 10px
+
+// Main navigation
+#main_nav 
+	background: $main_orange
+
+.right-small
+	border-left: solid 1px $darker_orange
+
+.right-off-canvas-menu
+	min-height: 300px
+	background: $main_orange
+	ul.off-canvas-list li 
+		label
+			color: #eee
+			background: $darker_orange
+		a
+			border-bottom: 1px solid $darker_orange
+
+
