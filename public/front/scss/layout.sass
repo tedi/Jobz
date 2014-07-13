@@ -16,7 +16,22 @@ $blue: #0092C9
 	&:hover
 		color: #fff
 		background: url(../images/li.svg) darken($blue, 10%) no-repeat
-
+.chat_box
+	position: fixed
+	bottom: 0
+	left: 0
+	z-index: 9999
+	width: 100%
+	margin-bottom: 0
+	input
+		width: 100%
+		margin-bottom: 0
+	button
+		position: absolute
+		right: 0
+		bottom: 0
+		padding: 9px
+		margin-bottom: 0
 .splash
 	background: $main_orange
 	min-height: 100%
@@ -47,6 +62,59 @@ $blue: #0092C9
 		.button-group 
 			& > li:last-child
 				float: right
+// Chat/messages
+h4.row.message_heading
+	margin-bottom: 10px
+.message
+	img
+		width: 40px
+		height: 40px
+		margin-right: 10px
+		border-radius: 40px
+		border: 3px solid $main_orange
+	.panel
+		width: calc(100% - 75px)
+		padding: .75rem
+		position: relative
+	&.mine
+		img
+			float: left	
+		.panel
+			float: right
+			background: $lighter_orange
+			border-color: lighten($main_orange, 40%)
+			&:after
+				top: 12px
+				left: -15px
+				bottom: auto
+				right: auto
+				border-width: 10px 15px 10px 0
+				border-color: transparent lighten($main_orange, 40%)
+				content: ""
+				position: absolute
+				bottom: auto
+				border-style: solid
+				display: block
+				width: 0
+	&.theirs
+		img
+			float: right
+		.panel
+			float: left
+			margin-right: 15px
+			&:after
+				top: 12px
+				right: -15px
+				bottom: auto
+				left: auto
+				border-width: 10px 0 10px 15px
+				border-color: transparent #b6edff
+				content: ""
+				position: absolute
+				bottom: auto
+				border-style: solid
+				display: block
+				width: 0
 
 // Judge screen(s)
 .button-group
@@ -102,11 +170,11 @@ $blue: #0092C9
 					span
 						float: right
 					img
-						width: 30px
-						height: 30px
+						width: 40px
+						height: 40px
 						margin-right: 10px
-						border-radius: 30px
-						border: 5px solid #fff
+						border-radius: 40px
+						border: 3px solid $main_orange
 				h6
 					font-style: italic
 					margin-top: 0
